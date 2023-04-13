@@ -25,9 +25,6 @@ and prints the files tree of that directory together with the content of the fil
 	Args: cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		path := args[0]
-
-		fmt.Printf("Scanning directory: %s\n", path)
-
 		err := filepath.Walk(path, func(path string, info os.FileInfo, err error) error {
 			if err != nil {
 				return err
@@ -53,14 +50,12 @@ and prints the files tree of that directory together with the content of the fil
 				}
 				fmt.Printf("%s\n", content)
 			}
-
 			return nil
 		})
 
 		if err != nil {
 			return fmt.Errorf("failed to scan directory: %w", err)
 		}
-
 		return nil
 	},
 }
