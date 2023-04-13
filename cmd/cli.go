@@ -38,7 +38,6 @@ and prints the files tree of that directory together with the content of the fil
 			}
 
 			if info.IsDir() {
-				fmt.Printf("%s/\n", path)
 				return nil
 			}
 
