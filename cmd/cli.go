@@ -42,7 +42,7 @@ and prints the files tree of that directory together with the content of the fil
 			}
 
 			if file.ShouldIncludeFile(path, filter) {
-				fmt.Printf("%s\n", path)
+				fmt.Printf("// File %s\n", path)
 				content, err := file.ReadFile(path)
 				if err != nil {
 					return err
