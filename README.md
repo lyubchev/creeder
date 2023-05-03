@@ -29,7 +29,7 @@ where:
 For example, to print the files tree and contents of all `.go` and `.txt` files in the `/path/to/dir` directory, ignoring the `node_modules` and `vendor` directories, run the following command:
 
 ```bash
-$ cli-tool /path/to/dir -f go,txt -i node_modules,vendor
+$ creeder /path/to/dir -f go,txt -i node_modules,vendor
 ```
 
 ## Purpose
